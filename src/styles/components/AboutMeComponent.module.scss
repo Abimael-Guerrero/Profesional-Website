@@ -1,7 +1,6 @@
 @import '../globals/';
 
 .hp-container__about-me {
-  border: 1px solid red;
   @include wh(100%, 100%);
   grid-column-start: 1;
   grid-column-end: 2;  
@@ -10,23 +9,57 @@
 
   font-size: clamp(16px, 5vw, 96px);
   font-weight: bold;
-  padding: 20px 35px 0;
+  padding: 20px 0 0 35px;
   background-color: $soft-dark;  
   border-radius: 20px;
   color: white;
-  display: flex;
-  justify-content: space-between;
-
-  &__inf {
-    border: 1px solid red;
-    @include wh(58%, 25%);
-    margin-bottom: 35px;
-    align-self: flex-end;
-    background-image: url('../../img/about-me-inf.png')
-  }
+  position: relative;
 
   &:link {
     text-decoration: none;
   }
 
+  &__inf {
+    @include wh(60%, 25%);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 35px; 
+    top: 60%;
+  }
+
+  &:hover > &__inf {
+    animation-name: about-inf;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 4.0s;
+  }
+
+
+  &:after {
+    position: absolute;
+    content: '';
+    border-radius: 20px;
+    @include wh(99%, 98%);
+    top: 0px;
+    left: 0px;
+    border: clamp(1px, 0.235vw, 4.5px) solid transparent;
+    transition: 0.2s ease;
+  }
+  
+  &:hover:after {
+    border: clamp(1px, 0.235vw, 4.5px) solid $orange;
+    top: -25px;
+    left: 15px;
+  }
+
+}
+
+@keyframes about-inf {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
 }

@@ -1,0 +1,47 @@
+@import '../globals';
+@import '../components/ContactMeComponent.module.scss';
+
+.hp-container__contact-me {
+  border: 1px solid red;
+}
+
+// .hp-container__inf {
+//   @include wh(58%, 25%);
+//   // font-family: Cascadia Code;
+//   font-size: clamp(16px, 30px, 96px);
+//   margin-bottom: 35px;
+//   align-self: flex-end;
+//   // background-image: url('../../img/contact-me-inf.png');
+//   background-size: auto 100%;
+//   background-repeat: no-repeat;
+
+//   &:hover {
+//     animation-name: contact-inf;
+//     animation-iteration-count: infinite;
+//     animation-timing-function: linear;
+//     animation-duration: 3.5s;
+//   }
+// }  
+
+// @keyframes contact-inf {
+//   0% {
+//     background-position: 0 0;
+//   }
+//   100% {
+//     background-position: 100% 0;
+//   }
+// }
+.hp-container__inf {
+  @include wh(58%, 25%);
+  font-family: Cascadia Code;
+  font-size: clamp(16px, 30px, 96px);
+  margin-bottom: 35px;
+  align-self: flex-end;
+  // background-image: url('../../img/contact-me-inf.png');
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+
+  &:hover {
+    border: 1px solid red;
+  }
+}

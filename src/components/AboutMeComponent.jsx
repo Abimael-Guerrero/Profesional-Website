@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import InfoText from '../components/InfoText'
 import style from '../styles/components/AboutMeComponent.module.scss'
 
 function AboutMeComponent () {
@@ -8,7 +9,10 @@ function AboutMeComponent () {
     className={style['hp-container__about-me']}>
       About
       <br />Me
-      <div className={style['hp-container__about-me__inf']}></div>
+      <InfoText
+      infoClass={style['hp-container__about-me__inf']}
+      image={true}
+      />
     </Link>
   )
 }

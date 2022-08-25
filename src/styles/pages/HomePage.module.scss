@@ -13,14 +13,4 @@
   justify-items: center;
   font-family: adineue PRO;
   gap: 30px;
-
-  &__my-projects {
-    border: 1px solid red;
-    @include wh(100%, 100%);
-
-    grid-column-start: 2;
-    grid-column-end: 3;  
-    grid-row-start: 2;
-    grid-row-end: 4;  
-  }
 }
