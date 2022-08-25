@@ -1,0 +1,32 @@
+@import '../globals/';
+
+.hp-container__about-me {
+  border: 1px solid red;
+  @include wh(100%, 100%);
+  grid-column-start: 1;
+  grid-column-end: 2;  
+  grid-row-start: 3;
+  grid-row-end: 4;  
+
+  font-size: clamp(16px, 5vw, 96px);
+  font-weight: bold;
+  padding: 20px 35px 0;
+  background-color: $soft-dark;  
+  border-radius: 20px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+
+  &__inf {
+    border: 1px solid red;
+    @include wh(58%, 25%);
+    margin-bottom: 35px;
+    align-self: flex-end;
+    background-image: url('../../img/about-me-inf.png')
+  }
+
+  &:link {
+    text-decoration: none;
+  }
+
+}

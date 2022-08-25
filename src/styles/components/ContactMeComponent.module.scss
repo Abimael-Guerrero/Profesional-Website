@@ -1,0 +1,90 @@
+@import '../globals';
+
+.hp-container__contact-me {
+  @include wh(100%, 100%);
+  display: flex;
+
+  grid-column-start: 2;
+  grid-column-end: 3;  
+  grid-row-start: 1;
+  grid-row-end: 2;
+  
+  &:link {
+    text-decoration: none;
+  }
+
+  &:hover {
+    gap: 30px
+  }
+
+  &__text-box {
+    font-size: clamp(16px, 5vw, 96px);
+    border-radius: 20px 20px;
+    font-weight: bold;
+    color: white;
+    padding: 20px 35px 0;
+    background: $soft-dark;
+    @include wh(100%, 100%);
+    display: flex;
+    justify-content: space-between;
+    transition: 0.3s ease;
+    
+    
+    &__inf{
+      @include wh(58%, 25%);
+      font-family: Cascadia Code;
+      font-size: clamp(16px, 30px, 96px);
+      margin-bottom: 35px;
+      align-self: flex-end;
+      background-image: url('../../img/contact-me-inf.png');
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+    }      
+  }
+
+  &:hover > &__text-box > &__text-box__inf {
+    animation-name: contact-inf;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 3.5s;
+  }
+
+  &:hover > &__text-box {
+    @include wh(85%, 100%);
+    border-radius: 20px 0 0 20px;
+  }
+  
+  &__arrow-section {
+    transition: 0.3s ease;
+    border-radius: 0 20px 20px 0;
+    width: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    &:hover > &__arrow {
+      margin-left: 15px;
+      margin-top: 30px;
+    }
+    
+    &__arrow {
+      transition: 0.3s ease;
+      margin-top: 45px;
+      width: 35%;
+    }
+  }
+  
+  &:hover > &__arrow-section {
+    @include wh(15%, 100%);
+    border: clamp(1px, 0.235vw, 4.5px) solid $orange;
+  }
+}
+
+@keyframes contact-inf {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
