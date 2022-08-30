@@ -1,6 +1,5 @@
 import AboutMeInf from '../img/about-me-inf.png'
 import ContactMeInf from '../img/contact-me-inf.png'
-import PropTypes from 'prop-types'
 
 function InfoText ({ image, infoClass }) {
   return (
@@ -12,8 +11,3 @@ function InfoText ({ image, infoClass }) {
 }
 // style['hp-container__inf']
 export default InfoText
-
-InfoText.propTypes = {
-  image: PropTypes.bool,
-  infoClass: PropTypes.string
-}

@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types'
-
-function H1 ({ text, h1Class, spanClass, lineClass }) {
+function H1 ({ text, h1Class, spanClass, lineClass, changeText }) {
   return (
-    <h1 className={h1Class}>
+    <h1
+      className={h1Class}
+      onClick={changeText}>
       <span className={spanClass}>{text}</span>
       <div className={lineClass}></div>
     </h1>
@@ -10,10 +10,3 @@ function H1 ({ text, h1Class, spanClass, lineClass }) {
 }
 
 export default H1
-
-H1.propTypes = {
-  text: PropTypes.string,
-  h1Class: PropTypes.string,
-  spanClass: PropTypes.string,
-  lineClass: PropTypes.string
-}

@@ -30,6 +30,7 @@ module.exports = {
     'react/react-in-jsx-scope': RULES.O,
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'eol-last': ['error', 'never'],
-    'jsx-quotes': ['error', 'prefer-single']
+    'jsx-quotes': ['error', 'prefer-single'],
+    'react/prop-types': 0
   }
 }
