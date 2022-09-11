@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import InfoText from '../components/InfoText'
 import style from '../styles/components/AboutMeComponent.module.scss'
+import AboutMeInf from '../img/about-me-inf.png'
 
 function AboutMeComponent () {
   return (
@@ -11,7 +12,7 @@ function AboutMeComponent () {
       <br />Me
       <InfoText
       infoClass={style['hp-container__about-me__inf']}
-      image={true}
+      image={AboutMeInf}
       />
     </Link>
   )

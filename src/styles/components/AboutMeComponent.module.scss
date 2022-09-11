@@ -29,7 +29,7 @@
   }
 
   &:hover > &__inf {
-    animation-name: about-inf;
+    animation-name: about-me-inf;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-duration: 4.0s;
@@ -55,7 +55,7 @@
 
 }
 
-@keyframes about-inf {
+@keyframes about-me-inf {
   0% {
     background-position: 0 0;
   }

@@ -1,9 +1,49 @@
 @import '../globals';
 
 .hp-container__my-projects {
-  border: 1px solid red;
   @include wh(100%, 100%);
 
   grid-row-start: 2;
   grid-row-end: 4;
+
+  font-size: clamp(16px, 5vw, 96px);
+  font-weight: bold;
+  padding: 20px 0 0 35px;
+  background-color: $soft-dark;  
+  border-radius: 20px;
+  color: white;
+  position: relative;
+  
+  &:link {
+    text-decoration: none;
+  }
+  
+  & span {
+    font-weight: lighter;
+  }
+
+  &__inf {
+    @include wh(75%, 12%);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 35px; 
+    bottom: 7%;
+  }
+
+  &:hover > &__inf {
+    animation-name: my-projects-inf;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 2.5s;
+  }
+}
+
+@keyframes my-projects-inf {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
 }

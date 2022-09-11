@@ -1,8 +1,7 @@
-function H1 ({ text, h1Class, spanClass, lineClass, changeText }) {
+function H1 ({ text, h1Class, spanClass, lineClass }) {
   return (
     <h1
-      className={h1Class}
-      onClick={changeText}>
+      className={h1Class}>
       <span className={spanClass}>{text}</span>
       <div className={lineClass}></div>
     </h1>

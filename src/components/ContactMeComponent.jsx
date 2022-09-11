@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import InfoText from '../components/InfoText'
 import style from '../styles/components/ContactMeComponent.module.scss'
+import ContactMe from '../img/contact-me-inf.png'
 
 function ContactMeDiv () {
   return (
@@ -12,7 +13,7 @@ function ContactMeDiv () {
         <br />me
         <InfoText
         infoClass={style['hp-container__contact-me__text-box__inf']}
-        image={false} />
+        image={ContactMe} />
       </div>
       <div className={style['hp-container__contact-me__arrow-section']}>
         <img
