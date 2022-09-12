@@ -9,6 +9,14 @@
   grid-row-start: 1;
   grid-row-end: 2;
   
+  @media (max-width: 1250px) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    height: 250px;
+  }
+
   &:link {
     text-decoration: none;
   }
@@ -29,6 +37,10 @@
     justify-content: space-between;
     transition: 0.3s ease;
     position: relative;
+
+    @media (max-width: 1250px) {
+      font-size: clamp(16px, 7.2vw, 90px);  
+    }
     
     &__inf{
       @include wh(58%, 25%);
@@ -46,6 +58,10 @@
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-duration: 3.5s;
+    
+    @media (max-width: 1250px) {
+      animation-duration: 2.5s;
+    }  
   }
 
   &:hover > &__text-box {

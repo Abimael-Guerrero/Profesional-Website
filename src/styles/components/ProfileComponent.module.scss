@@ -8,17 +8,29 @@
   display: flex;
   justify-content: space-between;
   gap: 5%;
+  
+  @media (max-width: 1250px) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    height: 500px; 
+  }
 
   &__img-container{
     // border: 3px dashed blue;
     @include wh(45%, 95%);
     background-image: url('../../img/profile-photo.jpg');
     background-size: cover;
-    background-position: 60%;
+    background-position: center;
     background-repeat: no-repeat;
     border-radius: 15px;
     align-self: flex-end;
     position: relative;
+    
+    @media (max-width: 1250px) {
+      background-position: center 0;
+    }
     
     &::after {
       content: '';
@@ -28,9 +40,11 @@
       position: absolute;
       top: -23px;
       right: -35px;
-      // top: 20px;
-      // right: 35px;
       z-index: -10;
+      
+      @media (max-width: 1250px) {
+        border: clamp(1px, 1vw, 4.5px) solid $white;
+      }  
     }
   }
   
@@ -52,6 +66,10 @@
       align-items: center;
       cursor:default;
 
+      @media (max-width: 1250px) {
+        font-size: clamp(16px, 7.2vw, 90px);  
+      }  
+
       &__text {
         height: 25%;
       }
@@ -60,6 +78,10 @@
         border-right: clamp(1px, 0.235vw, 4.5px) solid $white;
         height: 75%;
         transition: 0.3s ease;
+        
+        @media (max-width: 1250px) {
+          border-right: clamp(1px, 1vw, 4.5px) solid $white;
+        }
       }
 
       &:hover > &__line{
@@ -77,6 +99,10 @@
       align-items: center; 
       cursor: default;
 
+      @media (max-width: 1250px) {
+        font-size: clamp(16px, 7.2vw, 90px);  
+      }  
+
       &__text {
         height: 45%;
       }
@@ -85,6 +111,10 @@
         border-right: clamp(1px, 0.235vw, 4.5px) solid $white;
         height: 55%;
         transition: 0.3s ease;
+
+        @media (max-width: 1250px) {
+          border-right: clamp(1px, 1vw, 4.5px) solid $white;
+        }
       }
 
       &:hover > &__line{
@@ -110,6 +140,11 @@
         background-color: $dark;
         display: flex;
         align-items: center;
+        
+        @media (max-width: 1250px) {
+          border: clamp(1px, 1vw, 4.5px) solid $white;
+          font-size: clamp(16px, 7.2vw, 90px);  
+        }  
 
         &::after{
           border: clamp(1px, 0.235vw, 4.5px) solid $white;
@@ -121,6 +156,10 @@
           z-index: -1;
           top: 20px;
           right: 35px;
+
+          @media (max-width: 1250px) {
+            border: clamp(1px, 1vw, 4.5px) solid $white;
+          }  
         }
 
         &:hover {

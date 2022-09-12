@@ -5,7 +5,16 @@
   grid-column-start: 1;
   grid-column-end: 2;  
   grid-row-start: 3;
-  grid-row-end: 4;  
+  grid-row-end: 4;
+
+  @media (max-width: 1250px) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    height: 250px;
+    font-size: clamp(16px, 7.2vw, 90px);  
+  }
 
   font-size: clamp(16px, 5vw, 96px);
   font-weight: bold;
@@ -33,6 +42,10 @@
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-duration: 4.0s;
+
+    @media (max-width: 1250px) {
+      animation-duration: 3s;
+    }  
   }
 
 

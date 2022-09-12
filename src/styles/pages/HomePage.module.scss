@@ -1,7 +1,6 @@
 @import '../globals';
 
 .hp-container {
-  border: 3px dotted blue;
   // width: 1903px;
   // height: 947px;
   width: 100vw;
@@ -15,4 +14,11 @@
   justify-items: center;
   font-family: adineue PRO;
   gap: 30px;
+  
+  @media (max-width: 1250px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 45px;
+    height: 1700px;
+  }
 }
