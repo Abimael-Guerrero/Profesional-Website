@@ -24,6 +24,10 @@
     font-size: clamp(16px, 7.2vw, 90px);  
   }
 
+  @media (max-width: 750px) {
+    font-size: clamp(16px, 10vw, 75px);   
+  }
+
   &:link {
     text-decoration: none;
   }
@@ -45,8 +49,8 @@
       animation-duration: 4.0s;
       
       @media (max-width: 750px) {
-        @include wh(90%, 20%);
-        top: 70%;
+        @include wh(85%, 20%);
+        top: 77.5%;
         left: 50%;
         transform: translateX(-50%); 
         animation-duration: 4.5s;
@@ -72,20 +76,23 @@
     left: 0px;
     border: clamp(1px, 0.235vw, 4.5px) solid transparent;
     transition: 0.2s ease;
-  }
-  
-  &:hover:after {
-    border: clamp(1px, 0.235vw, 4.5px) solid $orange;
-    top: -25px;
-    left: 15px;
-    
+
     @media (max-width: 750px) {
-      border: clamp(1px, 1vw, 3.5px) solid $orange;
-      top: 12.5px;
-      left: 12.5px;  
+      & {
+        border: clamp(1px, 1vw, 3.5px) solid $orange;
+        top: 12px;
+        left: 12px;  
+      }
     }
   }
-
+  
+  @media (min-width: 751px) {
+    &:hover:after {
+      border: clamp(1px, 0.235vw, 4.5px) solid $orange;
+      top: -25px;
+      left: 15px;
+    }
+  }
 }
 
 @keyframes about-me-inf {

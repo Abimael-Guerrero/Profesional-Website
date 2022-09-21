@@ -26,7 +26,6 @@
   }
 
   &__text-box {
-    border: 1px solid red;
     font-size: clamp(16px, 5vw, 96px);
     border-radius: 20px 20px;
     font-weight: bold;
@@ -43,24 +42,45 @@
       font-size: clamp(16px, 7.2vw, 90px);  
     }
     
-    &__inf{
+    @media (max-width: 750px) {
+      font-size: clamp(16px, 10vw, 75px);   
+    }
+
+    &__inf {
       @include wh(58%, 25%);
-      margin-right: 35px;
-      top: 60%;
-      right: 0;
-      background-size: auto 100%;
-      background-repeat: no-repeat;
-      position: absolute;
+          margin-right: 35px;
+          top: 60%;
+          right: 0;
+          background-size: auto 100%;
+          background-repeat: no-repeat;
+          position: absolute;
+    }
+    
+    @media (max-width: 1250px) {
+      &__inf{
+        animation-name: contact-inf;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-duration: 2.5s;
+        
+        @media (max-width: 750px) {
+          @include wh(85%, 20%);
+          top: 77.5%;
+          left: 50%;
+          transform: translateX(-50%);
+          animation-duration: 3.5s;
+        }
+      }
     }
 
-    &:hover > &__inf {
-      border: 1px solid red;
-      animation-name: contact-inf;
-      animation-iteration-count: infinite;
-      animation-timing-function: linear;
-      animation-duration: 3.5s;
-
-    }
+    @media (min-width: 1251px) {
+      &:hover > &__inf {
+        animation-name: contact-inf;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-duration: 3.5s;
+      }
+    } 
   }
 
   // &:hover > &__text-box > &__text-box__inf {
@@ -72,10 +92,14 @@
   //     animation-duration: 2.5s;
   //   }  
   // }
+  
+  @media (max-width: 750px) {
+    &__text-box {
+      @include wh(85%, 100%);
+      border-radius: 20px 0 0 20px;
+    }
 
-  &:hover > &__text-box {
-    @include wh(85%, 100%);
-    border-radius: 20px 0 0 20px;
+    gap: 30px    
   }
   
   &__arrow-section {
@@ -90,17 +114,36 @@
       transition: 0.3s ease;
       margin-top: 45px;
       width: 35%;
+      
+      @media (max-width: 750px) {
+        margin-top: 30px;
+        width: 40%;
+      }
     }
 
     &:hover > &__arrow {
-      margin-left: 15px;
       margin-top: 30px;
+      margin-left: 15px;
+      
+      @media (max-width: 750px) {
+        margin-top: 20px;
+        margin-left: 5px;
+      }
     }
   }
   
-  &:hover > &__arrow-section {
-    @include wh(15%, 100%);
-    border: clamp(1px, 0.235vw, 4.5px) solid $orange;
+  @media (min-width: 751px) {
+    &:hover > &__arrow-section {
+      @include wh(15%, 100%);
+      border: clamp(1px, 0.235vw, 4.5px) solid $orange;
+    }
+  }
+
+  @media (max-width: 750px) {
+    &__arrow-section {
+      @include wh(15%, 100%);
+      border: clamp(1px, 1vw, 3.5px) solid $orange;
+    }
   }
 }
 

@@ -6,15 +6,6 @@
   grid-row-start: 2;
   grid-row-end: 4;
 
-  @media (max-width: 1250px) {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 3;
-    grid-row-end: 4;
-    height: 500px;
-    font-size: clamp(16px, 7.2vw, 90px);  
-  }
-
   font-size: clamp(16px, 5vw, 96px);
   font-weight: bold;
   padding: 20px 0 0 35px;
@@ -23,6 +14,20 @@
   color: white;
   position: relative;
   
+  @media (max-width: 1250px) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    height: 500px;
+    font-size: clamp(16px, 7.2vw, 90px);  
+  }
+  
+  @media (max-width: 750px) {
+    height: 400px;
+    font-size: clamp(16px, 10vw, 75px);   
+  }
+
   &:link {
     text-decoration: none;
   }
@@ -31,8 +36,21 @@
     font-weight: lighter;
   }
 
+  &__brackets {
+    transition: 0.2s ease;
+    
+    @media (max-width: 750px) {
+      color: $orange;
+    }
+  }
+
+  &:hover > &__brackets{
+    color: $orange;
+  }
+
+
   &__inf {
-    @include wh(75%, 12%);
+    @include wh(70%, 12%);
     background-size: auto 100%;
     background-repeat: no-repeat;
     position: absolute;
@@ -48,8 +66,8 @@
       animation-duration: 4.0s;
       
       @media (max-width: 750px) {
-        @include wh(90%, 10.5%);
-        bottom: 7%;
+        @include wh(85%, 10.5%);
+        bottom: 2.5%;
         left: 50%;
         transform: translateX(-50%); 
         animation-duration: 4.5s;
