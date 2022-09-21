@@ -1,8 +1,8 @@
-// import style from '../styles/pages/ContactMe.module.scss'
+import style from '../styles/pages/ContactMe.module.scss'
 
 function ContactMe () {
   return (
-    <h1>Contact me section</h1>
+    <h1 className={style['contact-me']}>Contact me section</h1>
   )
 }
 

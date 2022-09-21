@@ -1,11 +1,13 @@
 @import '../globals';
 
 .hp-container__profile {
+  // border: 1px solid blue;
   @include wh(100%, 100%);
   grid-row-start: 1;
   grid-row-end: 3;
   font-family: adineue PRO;
   display: flex;
+  // flex-wrap: wrap;
   justify-content: space-between;
   gap: 5%;
   
@@ -15,6 +17,11 @@
     grid-row-start: 1;
     grid-row-end: 2;
     height: 500px; 
+  }
+
+  @media (max-width: 750px) {
+    height: 800px;
+    flex-direction: column-reverse;
   }
 
   &__img-container{
@@ -31,6 +38,12 @@
     @media (max-width: 1250px) {
       background-position: center 0;
     }
+
+    @media (max-width: 750px) {
+      @include wh(97.5%, 60%);
+      align-self: flex-start;
+
+    }
     
     &::after {
       content: '';
@@ -44,7 +57,13 @@
       
       @media (max-width: 1250px) {
         border: clamp(1px, 1vw, 4.5px) solid $white;
-      }  
+      }
+      
+      @media (max-width: 750px) {
+        border: clamp(1px, 1vw, 3.5px) solid $white;
+        top: 15px;
+        right: -18px;  
+      }
     }
   }
   
@@ -55,23 +74,42 @@
     display: flex;
     letter-spacing: 5px;
     user-select: none;
+    
+    @media (max-width: 750px) {
+      @include wh(100%, 40%);
+      flex-wrap: wrap;
+    }  
 
     &__hi {
+      // border: 1px solid blue;
       font-size: clamp(16px, 5vw, 96px);
-      width: 100%;
+      width: 33.33333333333333%;
       transform: rotate(-180deg);
       writing-mode: tb-rl;
       color: $white;
       display: flex;
       align-items: center;
-      cursor:default;
-
+      cursor: default;
+      
       @media (max-width: 1250px) {
         font-size: clamp(16px, 7.2vw, 90px);  
+      }
+      
+      @media (max-width: 750px) {
+        font-size: clamp(16px, 10vw, 75px);  
+        transform: rotate(0deg);
+        writing-mode: horizontal-tb;
+        width: 100%;
+        height: 33.33333333333333%;
       }  
-
+      
       &__text {
         height: 25%;
+        
+        @media (max-width: 750px) {
+          height: auto;
+          width: 18%;
+        } 
       }
 
       &__line {
@@ -82,29 +120,54 @@
         @media (max-width: 1250px) {
           border-right: clamp(1px, 1vw, 4.5px) solid $white;
         }
+        
+        @media (max-width: 750px) {
+          border-right: none;
+          height: 0;
+          border-top: clamp(1px, 1vw, 3.5px) solid $white;
+          width: 82%;
+        }    
       }
 
       &:hover > &__line{
         height: 70%;
+
+        @media (max-width: 750px) {
+          height: 0%;
+          width: 77%;
+        }
       }
     }
 
     &__i-am {
+      // border: 1px solid red;
       font-size: clamp(16px, 5vw, 96px);
       transform: rotate(-180deg);
       writing-mode: tb-rl;
-      width: 100%;
+      width: 33.33333333333333%;
       color: $white;
       display: flex;
       align-items: center; 
       cursor: default;
 
       @media (max-width: 1250px) {
-        font-size: clamp(16px, 7.2vw, 90px);  
-      }  
+        font-size: clamp(16px, 7.2vw, 90px);
+      }
+
+      @media (max-width: 750px) {
+        font-size: clamp(16px, 10vw, 75px);  
+        width: 100%;
+        height: 33.33333333333333%;
+        transform: rotate(0deg);
+        writing-mode: horizontal-tb;
+      }
 
       &__text {
         height: 45%;
+        @media (max-width: 750px) {
+          height: auto;
+          width: 30%;
+        }
       }
 
       &__line {
@@ -115,16 +178,33 @@
         @media (max-width: 1250px) {
           border-right: clamp(1px, 1vw, 4.5px) solid $white;
         }
+
+        @media (max-width: 750px) {
+          border-right: none;
+          height: 0;
+          border-top: clamp(1px, 1vw, 3.5px) solid $white;
+          width: 70%;
+        }
       }
 
       &:hover > &__line{
         height: 50%;
+        @media (max-width: 750px) {
+          height: 0;
+          width: 65%;
+        }
       }
     }
 
     &__abimael-wrapper {
-      width: 100%;
+      width: 33.33333333333333%;
       transform: rotate(-180deg);
+      
+      @media (max-width: 750px) {
+        width: 100%;
+        height: 33.33333333333333%;
+        transform: rotate(0deg);
+      }
 
       &__abimael {
         border: clamp(1px, 0.235vw, 4.5px) solid $white;
@@ -144,7 +224,16 @@
         @media (max-width: 1250px) {
           border: clamp(1px, 1vw, 4.5px) solid $white;
           font-size: clamp(16px, 7.2vw, 90px);  
-        }  
+        }
+
+        @media (max-width: 750px) {
+          font-size: clamp(16px, 10vw, 75px);
+          border: clamp(1px, 1vw, 3.5px) solid $white;
+          padding-left: 5px;
+          padding-top: 15px;
+          @include wh(97.5%, 100%);
+          writing-mode: horizontal-tb;
+        }
 
         &::after{
           border: clamp(1px, 0.235vw, 4.5px) solid $white;
@@ -159,6 +248,12 @@
 
           @media (max-width: 1250px) {
             border: clamp(1px, 1vw, 4.5px) solid $white;
+          }
+          
+          @media (max-width: 750px) {
+            border: clamp(1px, 1vw, 3.5px) solid $white;
+            writing-mode: horizontal-tb;
+            right: -22.5px;  
           }  
         }
 

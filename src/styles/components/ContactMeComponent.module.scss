@@ -26,6 +26,7 @@
   }
 
   &__text-box {
+    border: 1px solid red;
     font-size: clamp(16px, 5vw, 96px);
     border-radius: 20px 20px;
     font-weight: bold;
@@ -51,18 +52,26 @@
       background-repeat: no-repeat;
       position: absolute;
     }
+
+    &:hover > &__inf {
+      border: 1px solid red;
+      animation-name: contact-inf;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      animation-duration: 3.5s;
+
+    }
   }
 
-  &:hover > &__text-box > &__text-box__inf {
-    animation-name: contact-inf;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-duration: 3.5s;
-    
-    @media (max-width: 1250px) {
-      animation-duration: 2.5s;
-    }  
-  }
+  // &:hover > &__text-box > &__text-box__inf {
+  //   animation-name: contact-inf;
+  //   animation-iteration-count: infinite;
+  //   animation-timing-function: linear;
+  //   animation-duration: 3.5s;
+  //   @media (max-width: 1250px) {
+  //     animation-duration: 2.5s;
+  //   }  
+  // }
 
   &:hover > &__text-box {
     @include wh(85%, 100%);
