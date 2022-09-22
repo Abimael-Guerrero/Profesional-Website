@@ -47,28 +47,29 @@
     }
 
     &__inf {
-      @include wh(58%, 25%);
-          margin-right: 35px;
-          top: 60%;
-          right: 0;
-          background-size: auto 100%;
-          background-repeat: no-repeat;
-          position: absolute;
+      // border: 1px solid red;
+      @include wh(62.5%, 23%);
+      margin-right: 35px;
+      top: 60%;
+      right: 0;
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+      position: absolute;
     }
     
     @media (max-width: 1250px) {
       &__inf{
+        @include wh(62.5%, 23%);
         animation-name: contact-inf;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
-        animation-duration: 2.5s;
+        animation-duration: 4s;
         
         @media (max-width: 750px) {
-          @include wh(85%, 20%);
+          @include wh(85%, 17%);
           top: 77.5%;
           left: 50%;
           transform: translateX(-50%);
-          animation-duration: 3.5s;
         }
       }
     }
@@ -78,7 +79,7 @@
         animation-name: contact-inf;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
-        animation-duration: 3.5s;
+        animation-duration: 4s;
       }
     } 
   }

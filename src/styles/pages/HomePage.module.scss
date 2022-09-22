@@ -12,7 +12,7 @@
   grid-template-rows: repeat(3, 1fr);
   align-items: center;
   justify-items: center;
-  font-family: adineue PRO;
+  font-family: 'AdineueProBold', adineue PRO;
   gap: 30px;
   
   @media (max-width: 1250px) {
@@ -23,7 +23,6 @@
   }
 
   @media (max-width: 750px) {
-    border: 1px solid red;
     height: 1900px;
   }
 }
