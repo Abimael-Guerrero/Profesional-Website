@@ -1,32 +1,31 @@
 @import '../globals/index';
 
 .am-container {
-  border: 1px solid red;
-  font-family: Cascadia Code;
+  // border: 1px solid red;
+  font-family: 'CascadiaLight';
   width: 100vw;
-  // height: 100vh;
   color: white;
   padding-top: 80px;
   
-  &_introduction {
-    border: 1px solid red;
+  &__introduction {
+    // border: 1px solid red;
     background-color: $soft-dark;
-    // height: 700px;
     padding: 120px clamp(16px, 24vw, 1196px);
 
-    &_title {
+    &__title {
       // border: 1px solid red;
-      font-size: clamp(48px, 5vw, 96px);
+      font-family: 'AdineueProBold';
+      font-size: clamp(40px, 5vw, 96px);
       
       & span {
         color: $orange;
       }
     }
     
-    &_subtitle {
+    &__subtitle {
+      font-family: 'CascadiaItalic';
+      font-weight: 100;
       font-size: clamp(16px, 1.67vw, 32px);
-      font-weight: normal;
-      font-style: italic;
       margin: 90px 0 70px 0;
       
       @media (max-width: 750px) {
@@ -34,9 +33,20 @@
       }
     }
     
-    &_text {
+    &__text {
       font-size: clamp(16px, 1.67vw, 32px);
       font-weight: 100;
+    }
+  }
+
+  &__about-my-skills-text {
+    // border: 1px solid red;
+    font-family: 'AdineueProBold';
+    font-size: clamp(40px, 5vw, 96px);
+    padding: 150px clamp(16px, 24vw, 1196px) 150px;
+
+    & span {
+      color: $orange;
     }
   }
 }

@@ -1,0 +1,67 @@
+@import '../globals/index';
+
+.am-container__skills {
+  // border: 1px solid yellow;
+  padding: 0 clamp(16px, 24vw, 1196px) 200px;
+
+  &__titles {
+    // border: 3px dotted blue;
+    margin-bottom: 65px;
+    display: flex;
+    justify-content: space-between;
+    
+    &__main-title {
+      // border: 1px solid red;
+      font-size: clamp(40px, 5vw, 96px);
+      font-family: 'AdineueProBold';
+      
+      & span {
+        color: $orange;
+      }
+    }
+    
+    &__xp-title {
+      // border: 1px solid red;
+      font-size: clamp(16px, 1.67vw, 32px);
+      font-family: 'CascadiaRegular';
+      font-weight: lighter;
+      text-align: right;
+      align-self: flex-end;
+      padding-bottom: 25px;
+    }
+  }
+
+  &__content {
+    // border: 1px dashed white;
+    font-size: clamp(16px, 1.67vw, 32px);
+    font-family: 'CascadiaLight';
+    font-weight: lighter;
+    display: flex;
+    justify-content: space-between;
+    
+    &__items {
+      // border: 1px solid red;
+      width: 60%;
+      list-style: none;
+
+      & li {
+        // border: 1px solid blue;
+        &:hover {
+          color: $orange;
+          cursor: default;
+        }
+
+        & span {
+          color: $orange;
+        }
+      }
+    }
+    
+    &__xp {
+      // border: 1px solid red;
+      width: 40%;
+      text-align: right;
+      list-style: none;
+    }
+  }
+}
