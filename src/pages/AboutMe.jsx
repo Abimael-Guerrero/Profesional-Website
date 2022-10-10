@@ -9,8 +9,10 @@ function AboutMe () {
         <p className={style['am-container__introduction__subtitle']}>- A little bit about my self</p>
         <p className={style['am-container__introduction__text']}>
         Hi there! <br /><br />
-        My name is Abimael Zavala Guerrero I am 26 year old, I am Mexican and I am from Puebla City, Puebla.<br /><br />
-        I studied graphic design from 2014 to 2019 but 1 year before finishing college I felt atracted to code so I decided to learn just by self-teaching.</p>
+        My name is Abimael Zavala Guerrero, I am 26 year old, I am Mexican and I am from Puebla City, Puebla.
+        <br /><br />
+        I studied graphic design from 2014 to 2019 but one year before finishing college I felt atracted to code so I decided to learn just by self-teaching.
+        </p>
       </div>
       <h2 className={style['am-container__about-my-skills-text']}>About my <span>Skills</span></h2>
       <div>
@@ -30,7 +32,7 @@ function AboutMe () {
         />
           <Skills
             orangeText='Extra'
-            firstSkill='CSS Modules'
+            firstSkill='CSS-Modules'
             secondSkill={'Git & Github'}
             thirdSkill='Eslint'
             forthSkill='NPM'
@@ -43,10 +45,10 @@ function AboutMe () {
           />
         <Skills
           orangeText={<span>Graphic<br />Design</span>}
-          firstSkill='Adobe Illustrator'
-          secondSkill='Adobe Photoshop'
-          thirdSkill='Adobe After Effect'
-          forthSkill='Adobe Premiere'
+          firstSkill='Illustrator'
+          secondSkill='Photoshop'
+          thirdSkill='After Effects'
+          forthSkill='Premiere'
           fifthSkill='Adobe XD'
           firstSkillXp='4 years'
           secondSkillXp='4 years'

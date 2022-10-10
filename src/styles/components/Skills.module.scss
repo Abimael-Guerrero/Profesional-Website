@@ -1,14 +1,26 @@
 @import '../globals/index';
 
 .am-container__skills {
-  // border: 1px solid yellow;
+  // border: 0.5px solid yellow;
   padding: 0 clamp(16px, 24vw, 1196px) 200px;
 
+  @media (max-width: 1250px) {
+    padding: 0 clamp(16px, 20vw, 1000px) 175px;
+  }
+
+  @media (max-width: 750px) {
+    padding: 0 clamp(16px, 16vw, 1000px) 125px;
+  }
+
   &__titles {
-    // border: 3px dotted blue;
+    // border: 1px dotted blue;
     margin-bottom: 65px;
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 750px) {
+      margin-bottom: 40px;
+    }
     
     &__main-title {
       // border: 1px solid red;
@@ -40,28 +52,51 @@
     justify-content: space-between;
     
     &__items {
-      // border: 1px solid red;
-      width: 60%;
-      list-style: none;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      
+      @media (max-width: 750px) {
+        gap: 2.5px;
+      }
 
-      & li {
-        // border: 1px solid blue;
-        &:hover {
+      &__container{
+        // border: 1px solid red;
+        white-space: nowrap;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        cursor: default;
+        
+        &:hover > &__xp, &:hover > &__line {
           color: $orange;
-          cursor: default;
+          border-color: $orange;
+        }
+        
+        &__text {
+          padding-right: 15px;
+
+          & span {
+            color: $orange;
+            font-style: italic;
+
+            @media (max-width: 600px) {
+              display: none;              
+            }          
+          }
+        }
+        
+        &__line {
+          border-top: 1px solid $soft-dark;
+          width: stretch;
+          margin: auto 0;
         }
 
-        & span {
-          color: $orange;
+        &__xp {
+          padding-left: 15px;
         }
       }
-    }
-    
-    &__xp {
-      // border: 1px solid red;
-      width: 40%;
-      text-align: right;
-      list-style: none;
     }
   }
 }
